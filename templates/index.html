@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <title>Book2Movies</title>
+    <style>
+        .logo {
+            max-width: 600px; /* Adjust max-width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container {% if not session.logged_in %}blur{% endif %}">
+        <h1><img src="{{ url_for('static', filename='BOOK2MOVIE-7-2-2024.png') }}" class="logo" /></h1>
+        <form method="POST">
+            <input type="text" name="bookname" placeholder="Enter book title" required>
+            <button type="submit">Get Recommendations</button>
+        </form>
+        <h2>Recommendations:</h2>
+        {% if has_recommendations %}
+        <ul>
+            {% for title in recommender["original_title"] %}
+            <li>{{ title }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No recommendations found.</p>
+        {% endif %}
+        <a href="{{ url_for('logout') }}" class="fake-button">Sign Out</a>
+    </div>
+</body>
+
+</html>
