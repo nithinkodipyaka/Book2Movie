@@ -1,5 +1,10 @@
 # Book2Movie
 
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626.svg?logo=Jupyter&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB.svg?logo=Python&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-E34F26.svg?logo=HTML5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-1572B6.svg?logo=CSS3&logoColor=white)
+
 ## Project Description
 Book2Movie is a recommendation system project that leverages data from Goodreads and movie databases to provide book-to-movie recommendations. The project includes a web application, data analysis scripts, and a comprehensive report on the methodology used.
 
