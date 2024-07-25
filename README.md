@@ -1,48 +1,51 @@
-# Book2Movie: A Cosine Similarity-based Approach for Personalized Book-to-Movie Recommendations
+# Book2Movie
 
-Are you a bibliophile seeking the ideal cinematic adaptation for your favorite book? Look no further! Book2Movie is a powerful recommendation system designed to provide personalized and accurate suggestions for book-to-movie adaptations using advanced cosine similarity algorithms.
+## Project Description
+Book2Movie is a recommendation system project that leverages data from Goodreads and movie databases to provide book-to-movie recommendations. The project includes a web application, data analysis scripts, and a comprehensive report on the methodology used.
 
-## Features
+## Installation
+To install the necessary dependencies, run the following command:
+```bash
+pip install -r requirements.txt
+```
 
-### 1. Cosine Similarity Algorithm
+## Usage
+### Running the Web Application
+To start the web application, navigate to the project directory and run:
+```bash
+python app.py
+```
+The application will be accessible at `http://127.0.0.1:5000/`.
 
-Book2Movie utilizes sophisticated cosine similarity calculations to analyze the textual content of both books and movies. This ensures precise recommendations by understanding the underlying themes, characters, and narratives.
+### Jupyter Notebooks
+The project includes Jupyter notebooks for data analysis and model training. Open the notebooks using Jupyter:
+```bash
+jupyter notebook
+```
+Navigate to the `Book2Movie/Training` directory and open `Book2Movie.ipynb`.
 
-### 2. Personalization
+## Project Structure
+- **app.py**: Main application file for the web app.
+- **test.py**: Test script for the project.
+- **Book2Movie.ipynb**: Jupyter notebook for data analysis and model training.
+- **static/**: Directory containing static files (CSS, images).
+- **templates/**: Directory containing HTML templates for the web app.
+- **Dataset/**: Directory containing datasets used in the project.
+- **img/**: Directory containing images for the project.
 
-Tailoring recommendations to your unique taste, Book2Movie goes beyond generic suggestions. Whether you fancy suspenseful thrillers, heartwarming dramas, or epic fantasies, our system identifies the nuances that make each book-to-movie transition exceptional.
+## Data Sources
+- **Goodreads Dataset**: Contains book-related data such as book descriptions, tags, and ratings.
+- **Movies Dataset**: Contains movie-related data such as keywords, metadata, and ratings.
 
-### 3. User-Friendly Interface
+## Example Images
+Here are some example images used in the project:
 
-Navigate seamlessly through our intuitive interface. Easily input your favorite books, receive instant recommendations, and explore a curated list of potential cinematic gems that align with your literary interests.
+![Example Image 1](img/img1.png)
+![Example Image 2](img/img2.png)
+![Example Image 3](img/img3.png)
 
-### 4. Comprehensive Database
+## License
+This project is licensed under the terms of the LICENSE file.
 
-Explore a wide range of books and movies within our extensive database. Discover hidden literary treasures and cinematic masterpieces that you may have overlooked.
-
-### 5. Regular Updates
-
-Stay informed about the latest book-to-movie adaptations. Book2Movie is continuously updated to incorporate new releases, ensuring you are always in the know about the most recent and exciting adaptations in literature and film.
-
-## How to Use
-
-1. Input your favorite books or genres.
-2. Book2Movie analyzes your preferences using cosine similarity.
-3. Receive personalized recommendations for captivating movie adaptations.
-4. Explore, enjoy, and enhance your reading and viewing experience!
-
-Book2Movie is not just a recommendation engine; it's your personalized guide to a world where literature and cinema seamlessly converge. Elevate your entertainment experience with Book2Movie today!
-
-## Getting Started
-
-Follow these steps to get started with Book2Movie:
-
-1. Clone the repository: `git clone https://github.com/yourusername/Book2Movie_.git`
-2. Install dependencies: `pip install -r requirements.txt`
-3. Run the application: `book2movie_final.ipynb`
-
-## Contributing
-
-We welcome contributions! If you have ideas for improvement or bug fixes, feel free to open an issue or submit a pull request.
-
-Happy reading and watching! 📚🎬
+## Acknowledgments
+Special thanks to the authors of the literature review papers and datasets used in this project.
