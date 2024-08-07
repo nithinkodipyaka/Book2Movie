@@ -8,22 +8,20 @@
 /* Body styles */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('https://wallpapercave.com/wp/wp2609846.jpg'); /* Replace with your image path */
+    background-image: url('https://wallpapercave.com/wp/wp2609846.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+    background-attachment: fixed; /* This line prevents background scrolling */
     color: #333; /* Dark text color */
-}
+  }
 
 /* Container styles */
 .container {
     width: 80%;
     margin: auto;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
+    background-color: rgba(255, 255, 255, 0.663); /* White background with transparency */
     padding: 20px;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
@@ -33,7 +31,7 @@ body {
     width: 50%;
     margin: auto;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.5); /* White background with transparency */
+    background-color: rgba(255, 255, 255, 0.27); /* White background with transparency */
     padding: 20px;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */

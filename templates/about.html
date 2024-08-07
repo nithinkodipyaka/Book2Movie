@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <title>About - Book2Movie</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            background-image: url('https://wallpapercave.com/wp/wp2609846.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar-custom {
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+
+       .navbar-custom .btn {
+            color: #ce1d1d;
+            border: 2px solid #ce1d1d;
+            margin: 5px;
+            border-radius: 10px;
+            padding: 10px 20px;
+            background-color: white;
+        }
+
+        .navbar-custom .btn:hover {
+            background-color: #ce1d1d;
+            color: #fff;
+        }
+
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: #000000;
+        }
+
+        .container {
+            flex: 2;
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.647);
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #000000;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0);
+            color: #1a0a0a;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        .footer-section h5 {
+            margin-bottom: 10px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #e30707;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <a href="/" class="btn mx-2"><b>Home</b></a>
+                <a href="about" class="btn mx-2"><b>About</b></a>
+                <a href="contact" class="btn mx-2"><b>Contact Us</b></a>
+                <a href="{{ url_for('logout') }}" class="btn mx-2"><b>Sign Out</b></a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="text-center mb-4">
+            <img src="{{ url_for('static', filename='BOOK2MOVIE-7-2-2024.png') }}" class="logo" alt="Book2Movies Logo">
+        </div>
+        <h1>About Book2Movie</h1>
+        <p><b>Book2Movies is a platform that provides movie recommendations based on your favorite books. We aim to bridge
+            the gap between book lovers and movie enthusiasts by offering a curated list of movies that are either
+            adaptations of popular books or have similar themes and stories. Our goal is to enhance your entertainment
+            experience by connecting you to the best of both worlds.</b></p>
+        <p><b>Our recommendation system is designed to analyze the content of books and movies to identify similarities and
+        This uses cosine similarity to analyze book and movie texts, ensuring accurate recommendations based on themes,
+        characters, and narratives.
+        
+        Book2Movie is a recommendation system project that leverages data from Goodreads and movie databases to provide
+        book-to-movie recommendations. The project includes a web application, data analysis scripts, and a comprehensive report
+        on the methodology used.</b></p>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-section">
+                    <h5>About</h5>
+                    <p><a href="about">Learn more about us</a></p>
+                </div>
+                <div class="col-md-4 footer-section">
+                    <h5>Contact Us</h5>
+                    <p><a href="contact">Get in touch</a></p>
+                </div>
+                <div class="col-md-4 footer-section">
+                    <h5>Copyright</h5>
+                    <p>&copy; 2024 Book2Movie. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

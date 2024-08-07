@@ -2,6 +2,7 @@ from flask import Flask, request, render_template, redirect, url_for, session
 import pandas as pd
 import numpy as np
 from ast import literal_eval
+import sklearn
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -50,11 +51,6 @@ def content_recommender(title):
     recommendations['similarity_score'] = [score for _, score in sim_scores]
     return recommendations
 
-def show_movies(book_name):
-    recommendations = content_recommender(book_name)
-    for i in range(5):
-        print(recommendations["original_title"].iloc[i])
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if 'logged_in' not in session:
@@ -65,13 +61,17 @@ def index():
     recommendations = None
     if request.method == 'POST':
         book_name = request.form.get('bookname')
-        recommendations = show_movies(book_name)
         recommendations = content_recommender(book_name)
-        for i in range(3):
-            print(recommendations["original_title"].iloc[i])
-
         has_recommendations = not recommendations.empty
     return render_template('index.html', recommender=recommendations, has_recommendations=has_recommendations)
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

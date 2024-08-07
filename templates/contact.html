@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">    
+    <title>Contact Us - Book2Movie</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            background-image: url('https://wallpapercave.com/wp/wp2609846.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar-custom {
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        .navbar-custom .btn {
+            color: #ce1d1d;
+            border: 2px solid #ce1d1d;
+            margin: 5px;
+            border-radius: 10px;
+            padding: 10px 20px;
+            background-color: white;
+        }
+
+        .navbar-custom .btn:hover {
+            background-color: #ce1d1d;
+            color: #fff;
+        }
+
+        .container {
+            flex: 2;
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.647);
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0);
+            color: #1a0a0a;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        .footer-section h5 {
+            margin-bottom: 10px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #e30707;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+        .contact-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.contact-person {
+    width: 45%; /* Adjust width as needed */
+    margin-bottom: 20px;
+}
+
+.contact-person h2 {
+    margin-top: 0;
+}
+
+.contact-person p {
+    margin: 5px 0;
+}
+
+.contact-person a {
+    color: #0077b5; /* LinkedIn color */
+    text-decoration: none;
+}
+
+.contact-person a:hover {
+    text-decoration: underline;
+}
+
+.contact-person i {
+    margin-right: 8px;
+}
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <a href="/" class="btn mx-2"><b>Home</b></a>
+                <a href="about" class="btn mx-2"><b>About</b></a>
+                <a href="contact" class="btn mx-2"><b>Contact Us</b></a>
+                <a href="{{ url_for('logout') }}" class="btn mx-2"><b>Sign Out</b></a>
+            </div>
+        </div>
+    </nav>
+<!-- Include Font Awesome CSS in the <head> section of your HTML -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<div class="container mt-7">
+    <div class="text-center mb-4">
+        <img src="{{ url_for('static', filename='BOOK2MOVIE-7-2-2024.png') }}" class="logo" alt="Book2Movies Logo">
+    </div>
+    <h1>Contact Us</h1>
+    <p><b>If you have any questions, suggestions, or feedback, please feel free to reach out to us. We would love to hear
+        from you!</b></p>
+
+    <div class="contact-container">
+        <div class="contact-person">
+            <p><b>Email: kodipyaka.nithin2020@vitstudent.ac.in</b></p>
+            <p><b>
+                LinkedIn: <a href="https://www.linkedin.com/in/nithinkodipyaka" target="_blank"><i class="fab fa-linkedin"></i>
+                    Nithin Kodipyaka</a><br>
+                GitHub: <a href="https://github.com/nithinkodipyaka" target="_blank"><i class="fab fa-github"></i>
+                    nithinkodipyaka</a></b>
+            </p>
+        </div>
+
+        <div class="contact-person">
+            <p><b>Email: akila.b2020@vitstudent.ac.in</b></p>
+            <p><b>
+                LinkedIn: <a href="https://www.linkedin.com/in/akila-bala" target="_blank"><i class="fab fa-linkedin"></i>
+                    Akila Bala</a><br>
+                GitHub: <a href="https://github.com/akila-bala" target="_blank"><i class="fab fa-github"></i>
+                    akila-bala</a></b>
+            </p>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-section">
+                    <h5>About</h5>
+                    <p><a href="about">Learn more about us</a></p>
+                </div>
+                <div class="col-md-4 footer-section">
+                    <h5>Contact Us</h5>
+                    <p><a href="contact">Get in touch</a></p>
+                </div>
+                <div class="col-md-4 footer-section">
+                    <h5>Copyright</h5>
+                    <p>&copy; 2024 Book2Movie. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

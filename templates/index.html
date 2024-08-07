@@ -3,37 +3,145 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
-    <title>Book2Movies</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <title>Book2Movie</title>
     <style>
-        .logo {
-            max-width: 600px; /* Adjust max-width as needed */
-            height: auto; /* Maintain aspect ratio */
+        body {
+            background-color: #f8f9fa;
         }
+
+        .logo {
+            max-width: 500px;
+            height: auto;
+        }
+
+        .fake-button {
+            display: inline-block;
+            padding: 0.375rem 0.75rem;
+            margin-top: 1rem;
+            color: #fff;
+            background-color: #007bff;
+            border: 1px solid transparent;
+            border-radius: 0.25rem;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .fake-button:hover {
+            background-color: #0056b3;
+        }
+
+        .blur {
+            filter: blur(5px);
+        }
+
+        .navbar-nav {
+            flex-direction: row;
+        }
+
+        .navbar-nav .nav-link {
+            margin: 0 100px; /* Adjust margin as needed */
+        }
+
+        .navbar-custom {
+            background-color: rgba(255, 255, 255, 0.36);
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: #4e1212;
+        }
+
+        footer {
+
+            color: #491212;
+            padding: 20px 0;
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        .footer-section h5 {
+            margin-bottom: 10px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #e30707;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+    padding-bottom: 5rem; /* Adds space at the bottom of the container */
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem; /* Adjust as needed */
+}
+
     </style>
 </head>
 
 <body>
-    <div class="container {% if not session.logged_in %}blur{% endif %}">
-        <h1><img src="{{ url_for('static', filename='BOOK2MOVIE-7-2-2024.png') }}" class="logo" /></h1>
-        <form method="POST">
-            <input type="text" name="bookname" placeholder="Enter book title" required>
-            <button type="submit">Get Recommendations</button>
-        </form>
-        <h2>Recommendations:</h2>
-        {% if has_recommendations %}
-        <ul>
-            {% for title in recommender["original_title"] %}
-            <li>{{ title }}</li>
-            {% endfor %}
-        </ul>
-        {% else %}
-        <p>No recommendations found.</p>
-        {% endif %}
-        <a href="{{ url_for('logout') }}" class="fake-button">Sign Out</a>
+    
+<div class="container mt-5 pt-4 pb-5 {% if not session.logged_in %}blur{% endif %}">
+    <div class="text-center mb-4">
+        <img src="{{ url_for('static', filename='BOOK2MOVIE-7-2-2024.png') }}" class="logo" />
     </div>
+    <form method="POST" class="mb-4">
+        <div class="form-group mb-3">
+            <input type="text" name="bookname" class="form-control" placeholder="Enter book title" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Get Recommendations</button>
+    </form>
+    <h2 class="mb-4">Recommendations:</h2>
+    {% if has_recommendations %}
+    <ul class="list-group mb-4">
+        {% for title in recommender["original_title"] %}
+        <li class="list-group-item">{{ title }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p class="text-muted">No recommendations found.</p>
+    {% endif %}
+    <a href="{{ url_for('logout') }}" class="fake-button">Sign Out</a>
+</div>
+
+
+<footer class="text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 footer-section">
+                <h5><b>About</b></h5>
+                <p><a href="about"><b>Learn more about us</b></a></p>
+            </div>
+            <div class="col-md-4 footer-section">
+                <h5><b>Contact Us</b></h5>
+                <p><a href="contact"><b>Get in touch</b></a></p>
+            </div>
+            <div class="col-md-8 footer-section">
+                <h5><b>Copyright</b></h5>
+                <p><b>&copy; 2024 Book2Movie. All rights reserved.</b></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
