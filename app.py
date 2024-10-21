@@ -9,8 +9,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 app = Flask(__name__)
 app.secret_key = '123456789'  # Replace with a secure key
 
-recommendation = None
-book_name = None
+#
 
 # Load and process data
 movies = pd.read_csv("Dataset/movies/movies_metadata.csv")

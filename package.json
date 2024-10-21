@@ -1,0 +1,12 @@
+{
+  "name": "book2movie",
+  "version": "1.0.0",
+  "description": "![Jupyter](https://img.shields.io/badge/Jupyter-F37626.svg?logo=Jupyter&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB.svg?logo=Python&logoColor=white) ![HTML](https://img.shields.io/badge/HTML-E34F26.svg?logo=HTML5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6.svg?logo=CSS3&logoColor=white)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
