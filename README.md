@@ -1,4 +1,4 @@
-# Book2Movie
+# Book2Movie: A Cosine Similarity-based RAG-powered NLP & LLM Recommendation System
 
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626.svg?logo=Jupyter&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB.svg?logo=Python&logoColor=white)
@@ -6,7 +6,7 @@
 ![CSS](https://img.shields.io/badge/CSS-1572B6.svg?logo=CSS3&logoColor=white)
 
 ## Project Description
-Book2Movie is a recommendation system project that leverages data from Goodreads and movie databases to provide book-to-movie recommendations. The project includes a web application, data analysis scripts, and a comprehensive report on the methodology used.
+Book2Movie is an AI-driven system that recommends movies based on book descriptions using text similarity techniques. In addition, it features a Generative AI RAG module that enables interactive question-answering on movie plots through FAISS retrieval and the LLaMA model. Together, these components create a seamless pipeline from discovering a book, finding related movies, and exploring their plots with AI-generated insights.
 
 ## Installation
 To install the necessary dependencies, run the following command:
@@ -41,6 +41,31 @@ Navigate to the `Book2Movie/Training` directory and open `Book2Movie.ipynb`.
 ## Data Sources
 - **Goodreads Dataset**: Contains book-related data such as book descriptions, tags, and ratings.
 - **Movies Dataset**: Contains movie-related data such as keywords, metadata, and ratings.
+
+## GenAI RAG Module for Movie Plot Q&A
+
+In addition to book-to-movie recommendations, this repo now includes a **Generative AI Retrieval-Augmented Generation (RAG) pipeline** to answer questions about movie plots.
+
+### Notebook: `Nithin_GenAI_RAG_preview.ipynb`
+This notebook demonstrates an end-to-end RAG workflow using the **Wikipedia Movie Plots Dataset (~34k records)**.
+
+**Pipeline Overview:**
+1. **Embedding & Retrieval**: Movie plots are encoded into embeddings and stored in a **FAISS vector store**.
+2. **Generation**: A **LLaMA 3.2-1B Instruct model** generates coherent answers from the retrieved plots.
+3. **Query Examples**:
+   - *"What is the plot of Inception?"*
+   - *"Do The Lake House and The Time Traveler’s Wife share similar themes?"*
+
+**Tech Stack:**
+- Hugging Face Transformers, LangChain, FAISS
+- Sentence-Transformers for embeddings
+- LLaMA 3.2-1B for generation
+
+**Future Enhancements:**
+- Use larger models (e.g., LLaMA-7B, Mistral) for richer answers
+- Add evaluation metrics (retrieval recall, answer accuracy)
+- Build an interactive front-end (Gradio/Streamlit)
+- Integrate with Book2Movie to create a “Book → Movie → Plot Q&A” pipeline
 
 ## Example Images
 Here are some example images used in the project:
